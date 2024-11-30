@@ -670,7 +670,7 @@ void ContinuedFraction::x0Andx1Init() {
 #ifdef DEBUG
    printf("ContinuedFraction::x0Andx1Init() %d\n", this);
 #endif
-   // les deux premières valeurs retournées sont poubellisées
+   // les deux premiÃ¨res valeurs retournÃ©es sont poubellisÃ©es
    (void *)eval(); (void *)eval();
 }
 
@@ -1203,14 +1203,14 @@ mpz_t *ContinuedFraction::eval_generalizedUnnormNumber() {
       mpz_init(quo1); mpz_init(quo2); mpz_init(quo3); mpz_init(tmp1); mpz_init(tmp2);
       mpz_add(tmp1, *xgeneralizedUnnormNumber.m._geta(), *xgeneralizedUnnormNumber.m._getb());
       mpz_add(tmp2, *xgeneralizedUnnormNumber.m._getc(), *xgeneralizedUnnormNumber.m._getd());
-      // on est obligé de faire les calculs alambiqués ci-dessous à cause de tan(3) et tan(178/113)...
-      // sinon on peut avoir des quotients négatifs (ou nuls) en cours de développement...
+      // on est obligÃ© de faire les calculs alambiquÃ©s ci-dessous Ã  cause de tan(3) et tan(178/113)...
+      // sinon on peut avoir des quotients nÃ©gatifs (ou nuls) en cours de dÃ©veloppement...
       // le test floor(a/c) = floor(b/d) n'est pas suffisant...
-      // le test floor(a/c) = floor((a+b)/(c+d)) n'est pas suffisant contrairement à l'article de I. Vardi...
+      // le test floor(a/c) = floor((a+b)/(c+d)) n'est pas suffisant contrairement Ã  l'article de I. Vardi...
       // le test complet est floor(a/c) = floor(b/d) ET floor(a/c) = floor((a+b)/(c+d))
-      // on peut avoir des quotients nuls en cours de développement : log(1/2) ou log(1/3)...
-      // (le développement n'est pas vraiment convergent pour x<1)
-      // ces cas sont éliminés par la formule log(1/x) = -log(x)
+      // on peut avoir des quotients nuls en cours de dÃ©veloppement : log(1/2) ou log(1/3)...
+      // (le dÃ©veloppement n'est pas vraiment convergent pour x<1)
+      // ces cas sont Ã©liminÃ©s par la formule log(1/x) = -log(x)
       if ((mpz_cmp_ui(*xgeneralizedUnnormNumber.m._getc(), 0) != 0) && // c != 0 && d != 0 && c+d != 0
           (mpz_cmp_ui(*xgeneralizedUnnormNumber.m._getd(), 0) != 0) &&
           (mpz_cmp_ui(tmp2, 0) != 0)) {
@@ -2308,7 +2308,7 @@ int main(int argc, char **argv) {
    char *line;
 
    int returned_from_longjmp;
-   //void *signal_alarm_save; // ancienne déclaration provoquant une erreur
+   //void *signal_alarm_save; // ancienne dÃ©claration provoquant une erreur
    void (*signal_alarm_save) (int);
 
    if (argc > 1) {
