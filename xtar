@@ -1,0 +1,8 @@
+make clean
+cd ..
+tar cvf cf_arith.tar cf_arith/*.[chyl] cf_arith/*.html cf_arith/*.htm cf_arith/Makefile cf_arith/*.lsp cf_arith/x* cf_arith/*.tex
+gzip cf_arith.tar
+mv cf_arith.tar.gz cf_arith.tgz
+ls -l cf_arith.tgz
+cp cf_arith.tgz /cygdrive/d/Public/
+cp cf_arith.tgz z:                 

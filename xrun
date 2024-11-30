@@ -1,0 +1,2 @@
+./cf_arith xin > xout
+diff xout xout.ref
