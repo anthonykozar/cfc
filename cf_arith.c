@@ -2389,4 +2389,6 @@ struct symbolTable *findSymbol(char *s) {
    return NULL;
 }
 
+/* (akozar) MOVED TO cf_arith.l:
 int yywrap(void) { return 1;}
+*/

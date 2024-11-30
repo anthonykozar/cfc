@@ -89,6 +89,9 @@ void delete_string() {
 #endif
 //#ifdef cygwin
 #if 1
-   yy_delete_buffer(yy_current_buffer);
+   yy_delete_buffer(YY_CURRENT_BUFFER);
 #endif
 }
+
+// (akozar) MOVED FROM cf_arith.c:
+int yywrap(void) { return 1;}
