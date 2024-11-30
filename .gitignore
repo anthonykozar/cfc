@@ -3,3 +3,10 @@ cf.html
 cfup.htm
 matrix-tower.lsp
 pseudo_code.tex
+
+*.o
+cf_arith2.output
+cf_arith2.tab.c
+cf_arith2.tab.h
+lex.yy.c
+xout
